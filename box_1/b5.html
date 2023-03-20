@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    let input = prompt('nhap ten ngoi sao')
+    function addNumbers() {
+        let index = arr1.indexOf(input)
+        if (index === -1){
+            alert('Khong tim thay gia tri phu hop')
+        } else{
+            alert(arr2[index])
+        }
+    }
+    addNumbers()
+</script>
+</body>
+</html>
