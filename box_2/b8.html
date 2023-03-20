@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = prompt('Nhap mang').split(',');
+        let input = +prompt('Nhap so muon kiem tra')
+        function alertMessage(array){
+            let new_array = [];
+            for(let i = array.length; i >= 0; i--){
+                new_array.push(array[i]);
+            }
+            return new_array
+        }
+        alert(alertMessage(array))
+    </script>
+</body>
+</html>

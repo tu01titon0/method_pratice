@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <button onclick="alertMessage('')"> Start </button>
+</head>
+<body>
+    <script>
+        let number = +prompt('Nhap so giao thua')
+        function alertMessage(number){
+            if (number === 0){
+                message = 'giai thua cua 0 = 0'
+            } else {
+                factorial = 1
+                for (let i = 1; i <= number; i++){
+                    factorial = factorial * i
+                }
+                message = `giai thua cua ${number} = ${factorial}`
+            }
+            return message
+        }
+        alert(alertMessage(number))
+    </script>
+</body>
+</html>

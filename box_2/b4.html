@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = prompt('Nhap ki tu muon kiem tra')
+        function alertMessage(number){
+            if (typeof number == 'number'){
+                message = `${number} la so`
+            } else {
+                message = `${number} khong phai la so`
+            }
+            return message
+        }
+        alert(alertMessage(number))
+    </script>
+</body>
+</html>
