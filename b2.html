@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputFeet = parseInt(prompt("Nhap feet"));
+        let inputMeters = parseInt(prompt('nhap meters'));
+        function convertFeetMeters(inputFeet, inputMeters) {
+            let feet = 0.035
+            result_1 = `${inputFeet} feet = ${inputFeet / feet} meteters`
+            result_2 = `${inputMeters} meters = ${inputFeet * feet} feet`
+            return result_1 + result_2
+        }
+        alert(convertFeetMeters(inputFeet, inputMeters))
+                
+    </script>
+</body>
+</html>
