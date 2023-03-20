@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h2> check symmetric string </h2>
+    </div>
+
+    </div>
+    <script>
+        let s = prompt('nhap chuoi muon kiem tra')
+        function isPalindrome(s) {
+            s = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (s.length === 0 || s.length === 1) {
+                return true;
+            }
+            if (s[0] !== s[s.length - 1]) {
+                return false;
+            }
+            return isPalindrome(s.slice(1, s.length - 1));
+        }
+        alert(isPalindrome(s))
+    </script>
+</body>
+</html>
