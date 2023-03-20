@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #customers td{
+            padding: 8px;
+        }
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+        #customers tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        .center{
+            margin: auto;
+            width: 50%;
+            border: 3px solid #f2f2f2;
+            padding: 10px;
+        }
+        .name {
+            width: 100%;
+        }
+        button {
+            background-color: rgb(84, 178, 80);
+            color: white;
+            border: white;
+            border-radius: 5px;
+            height: 35px;
+            width: 50px;
+        }
+        #newProduct{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h2> Add new product</h2>
+        <input type="text" id="newProduct" placeholder="new product">
+        <button onclick="addProduct()"> Add </button>
+        <h2> Display all product</h2>
+        <div id="showResult">
+    </div>
+
+    </div>
+    <script>
+     
+        let array = ['product 1', 'product 2', 'product 3'];
+        showProduct(array)
+        function addProduct() {
+            let input = document.getElementById('newProduct').value
+            array.push(input);
+            document.getElementById('newProduct').value = ""
+            showProduct(array) 
+        }
+
+        function editProduct(index) {
+            array[index] = prompt('nhap gia tri muon sua')
+            showProduct(array) 
+        }
+
+        function removeProduct(index) {
+            var result = confirm("Want to delete?");
+            if (result) {
+                array.splice(index, 1)
+                showProduct(array) 
+            }
+          }
+
+        function showProduct(array) {
+            table = '<table id="customers">'
+            for(let i = 0; i < array.length; i++){
+                table += `<tr>
+                    <td class="name"> ${array[i]}</td> 
+                    <td><button onclick="editProduct(${i})">edit</button></td>
+                    <td><button onclick="removeProduct(${i})">Delete</button></td>
+                     </tr>`
+            }
+            table += '</table>'
+            document.getElementById('showResult').innerHTML = table
+        }
+    </script>
+</body>
+</html>
